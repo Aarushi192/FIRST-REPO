@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --cream: #FAF4EC;
+            --oat: #F7F3E8;
+            --honey: #D6B99D;
+            --sage: #B8C1A1;
+            --moss: #72825C;
+            --rose: #EBC4C4;
+            --brown: #6A4D3A;}
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            font-family: Georgia, serif;
+            color: var(--brown);
+            padding: 20px;}
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            min-width: 250px;
+            margin: auto;}
+
+        .card {
+            background: var(--oat);
+            padding: 20px;
+            width: 250px;
+            border-radius: 14px;
+            border: 2px solid var(--sage);
+            box-shadow: 0 4px 10px rgba(114, 130, 92, 0.2);
+            text-align: center;
+            font-size: 1.2rem;}
+
+        .card:nth-child(1) { background: var(--rose); }
+        .card:nth-child(2) { background: var(--honey); }
+        .card:nth-child(3) { background: var(--sage); color: #fff; }
+        .card:nth-child(4) { background: var(--oat); }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="card">🌼 Cozy Tea Blends</div>
+        <div class="card">🍯 Honey Recipes</div>
+        <div class="card">🌿 Foraging Tips</div>
+        <div class="card">🧺 Cottage DIYs</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Baddie Nav</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #111;
+            color: #fff;}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #000;
+        }
+        .logo {
+            font-size: 1.5rem;}
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: #222;
+                padding: 15px;
+                border-radius: 10px;
+                display: none;
+            }
+            .menu-btn {
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+
+            input:checked ~ ul {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">💋 BaddieZone</div>
+
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-btn">🔥</label>
+
+        <ul>
+            <li><a href="#">😈 Home</a></li>
+            <li><a href="#">💄 About</a></li>
+            <li><a href="#">🖤 Services</a></li>
+            <li><a href="#">💅 Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

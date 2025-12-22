@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Baddie Nav 2</title>
+    <style>
+        body {margin: 0;
+            background: #0d0d0d;
+            color: white;
+            font-family: Arial;}
+
+        nav {display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 20px;
+            background: #000;
+            position: relative;}
+        
+        .logo {position: absolute;
+            left: 20px;
+            font-size: 1.4rem;}
+                
+        ul {display: flex;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+            margin: 0;}
+        
+            a {color: white;
+            text-decoration: none;
+            font-size: 1.1rem;}
+
+        #menu {display: none;}
+
+        .menu-btn {position: absolute;
+            right: 20px;
+            font-size: 1.9rem;
+            display: none;
+            cursor: pointer;}
+
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -220px;
+                height: 100%;
+                width: 200px;
+                background: #1a1a1a;
+                padding-top: 80px;
+                gap: 25px;
+                transition: 0.3s;}
+            .menu-btn {
+                display: block;}
+
+            #menu:checked ~ ul {
+                right: 0;}}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">💋 BaddieMode</div>
+
+        <input type="checkbox" id="menu">
+        <label for="menu" class="menu-btn">⚡</label>
+        <ul>
+            <li><a href="#">🔥 Home</a></li>
+            <li><a href="#">💅 Glow</a></li>
+            <li><a href="#">🖤 Deals</a></li>
+            <li><a href="#">💣 Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
